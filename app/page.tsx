@@ -38,16 +38,16 @@ export default function Home() {
   return (
     <main>
       <nav className="nav shell">
-        <a className="brand" href="#top" aria-label="Maya Brooks home"><span>MB</span><b>Maya Brooks</b><small>Real Estate</small></a>
+        <a className="brand" href="#top" aria-label="Maya Brooks home"><span>MB</span><b>Maya Brooks</b><small>Portland Property Studio</small></a>
         <div className="navlinks"><a href="#homes">Homes</a><a href="#approach">Approach</a><a href="#about">About</a></div>
         <a className="button button-small" href="#contact">Let’s talk <span>↗</span></a>
       </nav>
 
       <section className="hero shell" id="top">
         <div className="hero-copy">
-          <p className="eyebrow">Thoughtful real estate guidance · Portland, Oregon</p>
-          <h1>Find a home<br/>that feels like <em>you.</em></h1>
-          <p className="lede">Clear advice, local perspective, and a calmer way to buy or sell in Portland.</p>
+          <p className="eyebrow">Independent real estate field notes · Portland, Oregon</p>
+          <h1>Portland homes.<br/><em>No beige advice.</em></h1>
+          <p className="lede">Sharp local instincts, straight answers, and a buying or selling plan built around your actual life.</p>
           <div className="actions"><a className="button" href="#homes">Explore homes <span>→</span></a><button className="text-button" onClick={() => setChatOpen(true)}>Ask the home guide <span>✦</span></button></div>
           <div className="proof"><div className="avatars"><i>MK</i><i>AL</i><i>JS</i></div><p><b>Trusted by 120+ clients</b><br/><span>★★★★★ 5.0 average rating</span></p></div>
         </div>
