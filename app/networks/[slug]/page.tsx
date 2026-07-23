@@ -38,7 +38,7 @@ const profiles = {
       { label: "Performance", title: "Low-cost, frequent interaction", copy: "Solana's design supports trading, payments, games, collectibles, and consumer applications where users may sign many transactions and fees must remain small." },
       { label: "Primary use", title: "Consumer and market applications", copy: "The network is widely used for decentralized exchanges, stablecoin transfers, token launches, mobile experiences, and applications that benefit from rapid state updates." },
       { label: "Tradeoffs", title: "Performance raises operational demands", copy: "Validator hardware and bandwidth requirements are higher than on many networks. Congestion, client diversity, application security, and past periods of degraded performance remain important research areas." },
-      { label: "Research questions", title: "What to verify", copy: "Study validator concentration, client diversity, transaction failure rates, token issuance, application permissions, liquidity quality, and whether low fees encourage sustainable usage or short-lived speculation." },
+      { label: "Research questions", title: "What to verify", copy: "Study validator concentration, client diversity, failure rates, token issuance, app permissions, liquidity quality, and whether low fees encourage sustainable use or short-lived speculation." },
     ],
   },
 } as const;
