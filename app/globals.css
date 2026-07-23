@@ -126,7 +126,7 @@ footer>small{max-width:none;white-space:nowrap}
 .graph-panel{display:grid;grid-template-columns:35px 1fr;grid-template-rows:360px auto;background:var(--cream);color:var(--ink);border:3px solid var(--cream);padding:24px}
 .graph-scale{display:flex;flex-direction:column;justify-content:space-between;align-items:flex-end;padding:0 8px 35px 0;font-size:10px;font-weight:800}
 .graph-bars{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-.graph-bars::before{content:"";position:absolute;z-index:0;inset:0 0 35px 0;border-left:2px solid var(--ink);border-bottom:2px solid var(--ink);background:repeating-linear-gradient(to bottom,transparent 0,transparent calc(25% - 1px),rgba(48,82,92,.28) calc(25% - 1px),rgba(48,82,92,.28) 25%);pointer-events:none}
+.graph-bars::before{content:"";position:absolute;z-index:0;inset:0 0 35px 0;border-left:2px solid var(--ink);border-bottom:2px solid var(--ink);background-color:var(--cream);background-image:repeating-linear-gradient(to bottom,transparent 0,transparent calc(10% - 1px),rgba(48,82,92,.22) calc(10% - 1px),rgba(48,82,92,.22) 10%);pointer-events:none}
 .graph-column{position:relative;z-index:1;display:grid;grid-template-rows:minmax(0,1fr) 35px;align-items:end;min-width:0}
 .graph-bar{height:100%;display:flex;align-items:flex-end;justify-content:center;padding:0 12%}
 .graph-bar i{display:block;width:100%;border:2px solid var(--ink);transition:height .2s ease}
