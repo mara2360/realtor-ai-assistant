@@ -3,7 +3,7 @@ import type { ReactNode } from "react";
 
 type Feature = { label: string; title: string; copy: string };
 
-export default function AtlasPage({ eyebrow, title, intro, features, cta = "Get the weekly brief", ctaHref = "/brief", ctaHeading = "Move through crypto with context.", children }: { eyebrow: string; title: string; intro: string; features: Feature[]; cta?: string; ctaHref?: string; ctaHeading?: string; children?: ReactNode }) {
+export default function AtlasPage({ eyebrow, title, intro, features, cta = "Get the weekly brief", ctaHref = "/brief", ctaHeading = "Move through crypto with context.", compactTitle = false, children }: { eyebrow: string; title: string; intro: string; features: Feature[]; cta?: string; ctaHref?: string; ctaHeading?: string; compactTitle?: boolean; children?: ReactNode }) {
   return (
     <main id="main-content">
       <a className="skip-link" href="#page-heading">Skip to main content</a>
@@ -12,7 +12,7 @@ export default function AtlasPage({ eyebrow, title, intro, features, cta = "Get 
         <div className="navlinks"><Link href="/networks">Networks</Link><Link href="/method">Method</Link><Link href="/manifesto">Manifesto</Link><Link href="/contact">Contact</Link></div>
         <Link className="button button-small" href="/brief">Get the brief <span aria-hidden="true">↗</span></Link>
       </nav>
-      <header className="page-hero shell"><p className="eyebrow">{eyebrow}</p><h1 id="page-heading">{title}</h1><p>{intro}</p></header>
+      <header className="page-hero shell"><p className="eyebrow">{eyebrow}</p><h1 id="page-heading" className={compactTitle ? "compact-title" : undefined}>{title}</h1><p>{intro}</p></header>
       <section className="page-features shell" aria-label={`${title} details`}>{features.map((feature) => <article key={feature.title}><span>{feature.label}</span><div><h2>{feature.title}</h2><p>{feature.copy}</p></div></article>)}</section>
       {children}
       <section className="page-cta"><div className="shell"><p className="eyebrow">Signal over noise</p><h2>{ctaHeading}</h2><Link className="button button-light" href={ctaHref}>{cta} <span aria-hidden="true">→</span></Link></div></section>
