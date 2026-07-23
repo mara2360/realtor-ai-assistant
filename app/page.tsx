@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import type { FormEvent } from "react";
+import SiteNav from "./_components/SiteNav";
 
 const assets = [
   { slug: "bitcoin", signal: "21M max supply", name: "Bitcoin", meta: "Proof of work · Settlement layer", tag: "Digital scarcity", color: "clay", image: "/market-bitcoin.png" },
@@ -38,11 +39,7 @@ export default function Home() {
   return (
     <main id="main-content">
       <a className="skip-link" href="#primary-heading">Skip to main content</a>
-      <nav className="nav shell" aria-label="Primary navigation">
-        <a className="brand" href="#top" aria-label="Block Atlas home"><span>BA</span><b>Block Atlas</b><small>Crypto Field Notes</small></a>
-        <div className="navlinks"><a href="/networks">Networks</a><a href="/method">Method</a><a href="/manifesto">Manifesto</a></div>
-        <a className="button button-small" href="/brief">Get the brief <span>↗</span></a>
-      </nav>
+      <SiteNav />
 
       <section className="hero shell" id="top">
         <div className="hero-copy">

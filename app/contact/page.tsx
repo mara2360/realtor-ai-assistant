@@ -1,14 +1,11 @@
 import Link from "next/link";
+import SiteNav from "../_components/SiteNav";
 
 export default function ContactPage() {
   return (
     <main id="main-content">
       <a className="skip-link" href="#contact-heading">Skip to main content</a>
-      <nav className="nav shell" aria-label="Primary navigation">
-        <Link className="brand" href="/" aria-label="Block Atlas home"><span>BA</span><b>Block Atlas</b><small>Crypto Field Notes</small></Link>
-        <div className="navlinks"><Link href="/networks">Networks</Link><Link href="/method">Method</Link><Link href="/manifesto">Manifesto</Link><Link href="/contact" aria-current="page">Contact</Link></div>
-        <Link className="button button-small" href="/brief">Get the brief <span aria-hidden="true">↗</span></Link>
-      </nav>
+      <SiteNav />
 
       <header className="page-hero shell"><p className="eyebrow">Ask Block Atlas</p><h1 id="contact-heading">Questions are welcome.</h1><p>Need a concept unpacked, spotted something confusing, or have an idea for a future field note? Send it our way.</p></header>
 

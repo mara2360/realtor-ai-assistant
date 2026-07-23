@@ -70,6 +70,7 @@ footer>small{max-width:none;white-space:nowrap}
 .page-features article>span{font-size:12px;font-weight:900;letter-spacing:.14em;text-transform:uppercase;color:var(--red)}
 .page-features h2{margin:0 0 12px;font:900 clamp(34px,4vw,58px)/1 Arial Black,Arial,sans-serif;letter-spacing:-.025em;text-transform:uppercase}
 .page-features p{max-width:850px;margin:0;font:19px/1.7 Georgia,serif}
+.feature-button{margin-top:24px;padding:12px 16px;box-shadow:none}
 .page-cta{padding:95px 0;background:var(--blue);color:var(--cream);border-block:var(--line)}
 .page-cta>div{text-align:center}
 .page-cta h2{max-width:850px;margin:30px auto;font:900 clamp(46px,6vw,78px)/1 Arial Black,Arial,sans-serif;letter-spacing:-.03em;text-align:center;text-transform:uppercase}
