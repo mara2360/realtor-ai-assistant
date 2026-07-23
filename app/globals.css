@@ -139,3 +139,17 @@ footer>small{max-width:none;white-space:nowrap}
 .graph-reading p{margin:4px 0 0;font-size:13px;line-height:1.45}
 @media(max-width:900px){.method-graph{padding:70px 0}.method-graph-grid{grid-template-columns:1fr;gap:30px}.graph-panel{grid-template-rows:300px auto}.graph-reading{align-items:flex-start;flex-direction:column;gap:4px}}
 @media(max-width:500px){.graph-panel{padding:14px;grid-template-columns:28px 1fr}.graph-bars{gap:6px}.graph-bar{padding:0 5%}.graph-column>span{font-size:8px}.graph-reading>strong{font-size:44px}}
+
+/* Linked protocol cards and profiles */
+.card{display:block;transition:transform .18s ease,background-color .18s ease}
+.card:hover{transform:translateY(-6px);background:var(--acid)}
+.card:focus-visible{outline:4px solid var(--red);outline-offset:5px}
+.card-info small{font-weight:900}
+.network-snapshot{padding:90px 0;background:var(--acid);border-top:var(--line)}
+.network-snapshot .shell>div{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin:35px 0 24px}
+.network-snapshot article{display:grid;gap:8px;padding:24px;background:var(--cream);border:var(--line)}
+.network-snapshot article span{font-size:10px;font-weight:900;letter-spacing:.12em;text-transform:uppercase;color:var(--red)}
+.network-snapshot article b{font-size:20px;line-height:1.25}
+.network-snapshot small{display:block;max-width:800px;line-height:1.6}
+@media(max-width:800px){.network-snapshot{padding:65px 0}.network-snapshot .shell>div{grid-template-columns:1fr 1fr}.card:hover{transform:none}}
+@media(max-width:480px){.network-snapshot .shell>div{grid-template-columns:1fr}}

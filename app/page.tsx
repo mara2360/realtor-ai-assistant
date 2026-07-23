@@ -4,9 +4,9 @@ import { useState } from "react";
 import type { FormEvent } from "react";
 
 const assets = [
-  { signal: "21M max supply", name: "Bitcoin", meta: "Proof of work · Settlement layer", tag: "Digital scarcity", color: "clay", image: "/market-bitcoin.png" },
-  { signal: "Programmable", name: "Ethereum", meta: "Smart contracts · Global compute", tag: "Ecosystem", color: "blue", image: "/market-ethereum.png" },
-  { signal: "High throughput", name: "Solana", meta: "Low fees · Consumer applications", tag: "Network", color: "gold", image: "/market-solana.png" },
+  { slug: "bitcoin", signal: "21M max supply", name: "Bitcoin", meta: "Proof of work · Settlement layer", tag: "Digital scarcity", color: "clay", image: "/market-bitcoin.png" },
+  { slug: "ethereum", signal: "Programmable", name: "Ethereum", meta: "Smart contracts · Global compute", tag: "Ecosystem", color: "blue", image: "/market-ethereum.png" },
+  { slug: "solana", signal: "High throughput", name: "Solana", meta: "Low fees · Consumer applications", tag: "Network", color: "gold", image: "/market-solana.png" },
 ];
 
 const answers: Record<string, string> = {
@@ -62,7 +62,7 @@ export default function Home() {
 
       <section className="section shell" id="homes">
         <div className="section-head"><div><p className="eyebrow">Three networks, three theses</p><h2>Know what you’re looking at.</h2></div><a href="#contact">Get the weekly brief →</a></div>
-        <div className="cards">{assets.map((asset) => <article className="card" key={asset.name} aria-labelledby={`asset-${asset.name.toLowerCase()}`}><div className={`home-photo ${asset.color}`}><span>{asset.tag}</span><img className="asset-image" src={asset.image} alt={`Abstract market illustration for ${asset.name}`} width="1024" height="1024"/></div><div className="card-info"><h3 id={`asset-${asset.name.toLowerCase()}`}>{asset.name}</h3><strong>{asset.signal}</strong><p>{asset.meta}</p><small>Protocol profile</small></div></article>)}</div>
+        <div className="cards">{assets.map((asset) => <a className="card" href={`/networks/${asset.slug}`} key={asset.name} aria-labelledby={`asset-${asset.slug}`}><div className={`home-photo ${asset.color}`}><span>{asset.tag}</span><img className="asset-image" src={asset.image} alt={`Abstract market illustration for ${asset.name}`} width="1024" height="1024"/></div><div className="card-info"><h3 id={`asset-${asset.slug}`}>{asset.name}</h3><strong>{asset.signal}</strong><p>{asset.meta}</p><small>View protocol profile →</small></div></a>)}</div>
       </section>
 
       <section className="approach" id="approach"><div className="shell approach-grid"><div><p className="eyebrow">A saner way into crypto</p><h2>Research without the rush.</h2></div><div className="principles"><article><h3>Start with the why</h3><p>Understand the problem a network claims to solve before looking at a token.</p></article><article><h3>Trace the risk</h3><p>Map custody, smart-contract, liquidity, and incentive risks before taking action.</p></article><article><h3>Verify the signal</h3><p>Prefer primary sources, transparent data, and patient thinking over viral certainty.</p></article></div></div></section>
