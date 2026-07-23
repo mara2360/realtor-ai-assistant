@@ -189,3 +189,8 @@ footer>small{max-width:none;white-space:nowrap}
 .field-note aside{max-width:880px;margin:auto;padding:32px;background:var(--acid);border:var(--line)}
 .field-note aside>b{font-size:24px;text-transform:uppercase}
 @media(max-width:850px){.post-grid,.newsletter-grid{grid-template-columns:1fr}.newsletter-grid{gap:40px}.post-grid article{min-height:0}.newsletter form>div{display:grid;gap:10px}.field-note{padding-top:65px}.field-note-body{margin:45px auto}}
+
+/* Shared AI guide refinements */
+.chat-header-actions{display:flex;gap:2px!important}
+.chat-header-actions button{width:36px;height:36px;cursor:pointer}
+.chat .messages{min-height:120px;scroll-behavior:smooth}

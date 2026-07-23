@@ -1,7 +1,5 @@
 "use client";
 
-import { useState } from "react";
-import type { FormEvent } from "react";
 import SiteNav from "./_components/SiteNav";
 
 const assets = [
@@ -10,32 +8,7 @@ const assets = [
   { slug: "solana", signal: "High throughput", name: "Solana", meta: "Low fees · Consumer applications", tag: "Network", color: "gold", image: "/market-solana.png" },
 ];
 
-const answers: Record<string, string> = {
-  wallets: "A wallet manages the keys that authorize crypto transactions. Start with a reputable wallet, write down the recovery phrase offline, and never share it with anyone.",
-  security: "Use unique passwords, hardware-backed two-factor authentication, and a small test transaction before moving meaningful funds. Treat urgent messages and guaranteed returns as red flags.",
-  bitcoin: "Bitcoin is a decentralized monetary network with a fixed maximum supply of 21 million coins. Its design prioritizes scarcity, security, and censorship-resistant settlement.",
-  defi: "DeFi refers to financial applications built with smart contracts. It can enable trading, lending, and borrowing without a traditional intermediary, but smart-contract and market risks remain.",
-};
-
 export default function Home() {
-  const [chatOpen, setChatOpen] = useState(true);
-  const [messages, setMessages] = useState([{ from: "bot", text: "Hi, I’m Node—your crypto field guide. What should we unpack?" }]);
-  const [input, setInput] = useState("");
-
-  function ask(topic: string) {
-    const label = topic.charAt(0).toUpperCase() + topic.slice(1);
-    setMessages((m) => [...m, { from: "user", text: `Explain ${label.toLowerCase()}.` }, { from: "bot", text: answers[topic] }]);
-  }
-
-  function send(e: FormEvent) {
-    e.preventDefault();
-    if (!input.trim()) return;
-    const q = input.trim();
-    const key = Object.keys(answers).find((k) => q.toLowerCase().includes(k));
-    setMessages((m) => [...m, { from: "user", text: q }, { from: "bot", text: key ? answers[key] : "I can explain wallets, security, Bitcoin, and DeFi in plain language. Crypto involves risk, so verify important details with primary sources before acting." }]);
-    setInput("");
-  }
-
   return (
     <main id="main-content">
       <a className="skip-link" href="#primary-heading">Skip to main content</a>
@@ -46,7 +19,7 @@ export default function Home() {
           <p className="eyebrow">Independent crypto intelligence · Built for curious humans</p>
           <h1 id="primary-heading">Crypto clarity.<br/><em>No cults.</em></h1>
           <p className="lede">Understand the networks, risks, and ideas shaping digital ownership—without the hype cycle.</p>
-          <div className="actions"><a className="button" href="#homes">Explore networks <span aria-hidden="true">→</span></a><button type="button" className="text-button" onClick={() => setChatOpen(true)}>Ask the field guide <span aria-hidden="true">✦</span></button></div>
+          <div className="actions"><a className="button" href="#homes">Explore networks <span aria-hidden="true">→</span></a><button type="button" className="text-button" onClick={() => window.dispatchEvent(new Event("open-crypto-guide"))}>Ask the field guide <span aria-hidden="true">✦</span></button></div>
           <div className="proof"><div className="avatars"><i>BTC</i><i>ETH</i><i>SOL</i></div><p><b>Signal over noise</b><br/><span>Research · Context · Risk awareness</span></p></div>
         </div>
         <div className="hero-art" role="img" aria-label="Abstract decentralized network illustration">
@@ -69,8 +42,6 @@ export default function Home() {
       <section className="contact" id="contact"><div className="shell contact-inner"><p className="eyebrow">Your weekly reality check</p><h2>Enter the market with context.</h2><p>One concise brief on networks, narratives, security, and the risks worth noticing.</p><a className="button button-light" href="mailto:hello@blockatlas.xyz">Join the signal list <span>↗</span></a></div></section>
       <footer className="shell"><div className="brand"><span>BA</span><b>Block Atlas</b><small>Crypto Field Notes</small></div><p>hello@blockatlas.xyz · Research over reaction</p><small>© 2026 Block Atlas. Educational content only—not financial advice.</small></footer>
 
-      <button type="button" className="chat-launch" onClick={() => setChatOpen(!chatOpen)} aria-label={chatOpen ? "Close AI crypto guide" : "Open AI crypto guide"} aria-expanded={chatOpen} aria-controls="crypto-guide">{chatOpen ? "×" : "✦"}</button>
-      {chatOpen && <aside className="chat" id="crypto-guide" aria-labelledby="guide-title"><header><div><span aria-hidden="true">✦</span><p><b id="guide-title">Node</b><small><i aria-hidden="true"/> AI crypto guide</small></p></div><button type="button" onClick={() => setChatOpen(false)} aria-label="Close chat">×</button></header><div className="messages" aria-live="polite" aria-relevant="additions">{messages.map((m, i) => <div className={`message ${m.from}`} key={i}>{m.text}</div>)}</div>{messages.length < 3 && <div className="chips" aria-label="Suggested questions">{Object.keys(answers).map(k => <button type="button" key={k} onClick={() => ask(k)}>{k.charAt(0).toUpperCase()+k.slice(1)}</button>)}</div>}<form onSubmit={send}><label className="sr-only" htmlFor="crypto-question">Ask Node a crypto question</label><input id="crypto-question" value={input} onChange={e => setInput(e.target.value)} placeholder="Ask a crypto question…"/><button type="submit" aria-label="Send question">↑</button></form><small className="disclaimer">Educational guidance only · Always verify before acting.</small></aside>}
     </main>
   );
 }
