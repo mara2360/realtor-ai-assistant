@@ -155,3 +155,4 @@ footer>small{max-width:none;white-space:nowrap}
 .network-snapshot small{display:block;max-width:800px;line-height:1.6}
 @media(max-width:800px){.network-snapshot{padding:65px 0}.network-snapshot .shell>div{grid-template-columns:1fr 1fr}.card:hover{transform:none}}
 @media(max-width:480px){.network-snapshot .shell>div{grid-template-columns:1fr}}
+@media(max-width:800px){.desktop-break{display:none}}

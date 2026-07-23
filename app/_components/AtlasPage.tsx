@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { ReactNode } from "react";
 import SiteNav from "./SiteNav";
 
-type Feature = { label: string; title: string; copy: string; href?: string; linkLabel?: string };
+type Feature = { label: string; title: string; copy: ReactNode; href?: string; linkLabel?: string };
 
 export default function AtlasPage({ eyebrow, title, intro, features, cta = "Get the weekly brief", ctaHref = "/brief", ctaHeading = "Move through crypto with context.", compactTitle = false, children }: { eyebrow: string; title: string; intro: string; features: Feature[]; cta?: string; ctaHref?: string; ctaHeading?: string; compactTitle?: boolean; children?: ReactNode }) {
   return (
