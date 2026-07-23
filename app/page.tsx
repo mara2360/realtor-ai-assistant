@@ -4,9 +4,9 @@ import { useState } from "react";
 import type { FormEvent } from "react";
 
 const assets = [
-  { signal: "21M max supply", name: "Bitcoin", meta: "Proof of work · Settlement layer", tag: "Digital scarcity", color: "clay" },
-  { signal: "Programmable", name: "Ethereum", meta: "Smart contracts · Global compute", tag: "Ecosystem", color: "blue" },
-  { signal: "High throughput", name: "Solana", meta: "Low fees · Consumer applications", tag: "Network", color: "gold" },
+  { signal: "21M max supply", name: "Bitcoin", meta: "Proof of work · Settlement layer", tag: "Digital scarcity", color: "clay", image: "/market-bitcoin.png" },
+  { signal: "Programmable", name: "Ethereum", meta: "Smart contracts · Global compute", tag: "Ecosystem", color: "blue", image: "/market-ethereum.png" },
+  { signal: "High throughput", name: "Solana", meta: "Low fees · Consumer applications", tag: "Network", color: "gold", image: "/market-solana.png" },
 ];
 
 const answers: Record<string, string> = {
@@ -52,7 +52,7 @@ export default function Home() {
           <div className="proof"><div className="avatars"><i>BTC</i><i>ETH</i><i>SOL</i></div><p><b>Signal over noise</b><br/><span>Research · Context · Risk awareness</span></p></div>
         </div>
         <div className="hero-art" aria-label="Abstract decentralized network illustration">
-          <div className="sun"/><div className="hill hill-one"/><div className="hill hill-two"/><div className="house"><div className="roof"/><div className="chimney"/><div className="wall"><i/><i/><i/></div></div><div className="tree"><i/><i/><i/></div>
+          <div className="sun"/><div className="hill hill-one"/><div className="hill hill-two"/>
           <div className="listing-note"><span>Network pulse</span><b>Blocks keep moving</b><small>Open · Global · 24/7</small></div>
         </div>
       </section>
@@ -61,7 +61,7 @@ export default function Home() {
 
       <section className="section shell" id="homes">
         <div className="section-head"><div><p className="eyebrow">Three networks, three theses</p><h2>Know what you’re looking at.</h2></div><a href="#contact">Get the weekly brief →</a></div>
-        <div className="cards">{assets.map((asset, i) => <article className="card" key={asset.name}><div className={`home-photo ${asset.color}`}><span>{asset.tag}</span><div className={`mini-home home-${i}`}><i/><b/><em/></div></div><div className="card-info"><h3>{asset.name}</h3><strong>{asset.signal}</strong><p>{asset.meta}</p><small>Protocol profile</small></div></article>)}</div>
+        <div className="cards">{assets.map((asset) => <article className="card" key={asset.name}><div className={`home-photo ${asset.color}`}><span>{asset.tag}</span><img className="asset-image" src={asset.image} alt={`${asset.name} market graphic`}/></div><div className="card-info"><h3>{asset.name}</h3><strong>{asset.signal}</strong><p>{asset.meta}</p><small>Protocol profile</small></div></article>)}</div>
       </section>
 
       <section className="approach" id="approach"><div className="shell approach-grid"><div><p className="eyebrow">A saner way into crypto</p><h2>Research without the rush.</h2></div><div className="principles"><article><b>01</b><h3>Start with the why</h3><p>Understand the problem a network claims to solve before looking at a token.</p></article><article><b>02</b><h3>Trace the risk</h3><p>Map custody, smart-contract, liquidity, and incentive risks before taking action.</p></article><article><b>03</b><h3>Verify the signal</h3><p>Prefer primary sources, transparent data, and patient thinking over viral certainty.</p></article></div></div></section>
