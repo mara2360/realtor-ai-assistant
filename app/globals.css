@@ -51,3 +51,11 @@ button,.button,.navlinks a{min-height:44px}
 .disclaimer{font-size:10px;line-height:1.45}
 @media(max-width:800px){.section-head{flex-direction:column;align-items:flex-start}.actions{align-items:flex-start;flex-wrap:wrap}.hero h1{font-size:clamp(48px,15vw,64px);line-height:1}.contact h2{text-align:center}.ticker{justify-content:flex-start}.nav{height:84px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+
+/* Requested single-line refinements */
+.principles article{grid-template-columns:1fr;column-gap:0}
+.card-info p{grid-column:1/-1;white-space:nowrap}
+.contact p{max-width:none;white-space:nowrap}
+footer{gap:28px;flex-wrap:nowrap}
+footer>small{max-width:none;white-space:nowrap}
+@media(max-width:800px){.contact p,footer>small{white-space:normal}}
