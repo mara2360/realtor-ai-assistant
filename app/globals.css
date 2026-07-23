@@ -74,3 +74,17 @@ footer>small{max-width:none;white-space:nowrap}
 .page-cta h2{max-width:850px;margin:30px auto;font:900 clamp(46px,6vw,78px)/1 Arial Black,Arial,sans-serif;letter-spacing:-.03em;text-align:center;text-transform:uppercase}
 .page-cta .eyebrow{color:var(--ink)}
 @media(max-width:800px){.page-hero{padding:65px 0 55px}.page-hero h1{font-size:clamp(48px,14vw,70px)}.page-hero>p:last-child{font-size:19px}.page-features article{grid-template-columns:1fr;gap:14px;padding:36px 0}.page-features{padding-bottom:70px}.page-cta{padding:70px 0}}
+
+/* Contact page */
+.contact-layout{display:grid;grid-template-columns:.8fr 1.2fr;gap:90px;padding:90px 0 110px;align-items:start}
+.contact-note h2{margin:25px 0;font:900 clamp(40px,5vw,64px)/1 Arial Black,Arial,sans-serif;letter-spacing:-.03em;text-transform:uppercase}
+.contact-note>p:not(.eyebrow){font:18px/1.7 Georgia,serif}
+.contact-note>a{display:inline-block;margin-top:22px;border-bottom:3px solid var(--ink);font-weight:900}
+.contact-form{display:grid;gap:22px;padding:34px;background:var(--blue);color:var(--cream);border:var(--line)}
+.contact-form>div{display:grid;gap:8px}
+.contact-form label{font-size:12px;font-weight:900;letter-spacing:.12em;text-transform:uppercase}
+.contact-form input,.contact-form select,.contact-form textarea{width:100%;border:2px solid var(--ink);background:var(--cream);color:var(--ink);padding:13px;line-height:1.4}
+.contact-form textarea{resize:vertical;min-height:150px}
+.contact-form .button{justify-self:start;background:var(--acid);color:var(--ink);cursor:pointer}
+.contact-form>small{line-height:1.55}
+@media(max-width:800px){.contact-layout{grid-template-columns:1fr;gap:45px;padding:65px 0 80px}.contact-form{padding:22px}.navlinks a:last-child{display:none}}
