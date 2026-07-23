@@ -88,3 +88,24 @@ footer>small{max-width:none;white-space:nowrap}
 .contact-form .button{justify-self:start;background:var(--acid);color:var(--ink);cursor:pointer}
 .contact-form>small{line-height:1.55}
 @media(max-width:800px){.contact-layout{grid-template-columns:1fr;gap:45px;padding:65px 0 80px}.contact-form{padding:22px}.navlinks a:last-child{display:none}}
+
+/* Manifesto signal check */
+.signal-check{padding:100px 0;background:var(--acid);border-top:var(--line)}
+.signal-check-head{display:flex;align-items:end;justify-content:space-between;gap:30px}
+.signal-check-head h2{max-width:800px;margin:28px 0 0;font:900 clamp(46px,6vw,76px)/1 Arial Black,Arial,sans-serif;letter-spacing:-.035em;text-transform:uppercase}
+.signal-check-head>p{font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:.1em;white-space:nowrap}
+.signal-meter{height:12px;margin:38px 0;background:var(--cream);border:2px solid var(--ink)}
+.signal-meter span{display:block;height:100%;background:var(--red);transition:width .25s ease}
+.scenario-list{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.scenario-list article{display:flex;flex-direction:column;padding:25px;background:var(--cream);border:var(--line)}
+.scenario-list article>span{font-size:11px;font-weight:900;letter-spacing:.12em;text-transform:uppercase;color:var(--red)}
+.scenario-list h3{margin:18px 0 25px;font-size:24px;line-height:1.25}
+.scenario-options{display:grid;gap:10px;margin-top:auto}
+.scenario-options button{min-height:52px;padding:11px;border:2px solid var(--ink);background:transparent;color:var(--ink);font-weight:800;text-align:left;cursor:pointer}
+.scenario-options button:hover,.scenario-options button.selected{background:var(--blue);color:var(--cream)}
+.scenario-response{margin:20px 0 0;padding-top:18px;border-top:2px solid var(--ink);font-size:14px;line-height:1.6}
+.signal-result{margin-top:28px;padding:28px;background:var(--ink);color:var(--cream);border:3px solid var(--ink)}
+.signal-result b{font:900 28px Arial;text-transform:uppercase}
+.signal-result p{max-width:820px}
+.signal-result .text-button{color:var(--cream);border-color:var(--cream)}
+@media(max-width:900px){.scenario-list{grid-template-columns:1fr}.signal-check-head{align-items:flex-start;flex-direction:column}.signal-check{padding:70px 0}.scenario-list h3{font-size:21px}}
