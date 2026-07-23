@@ -109,3 +109,30 @@ footer>small{max-width:none;white-space:nowrap}
 .signal-result p{max-width:820px}
 .signal-result .text-button{color:var(--cream);border-color:var(--cream)}
 @media(max-width:900px){.scenario-list{grid-template-columns:1fr}.signal-check-head{align-items:flex-start;flex-direction:column}.signal-check{padding:70px 0}.scenario-list h3{font-size:21px}}
+
+/* Method research graph */
+.method-graph{padding:100px 0;background:var(--ink);color:var(--cream);border-top:var(--line)}
+.method-graph-head{max-width:860px}
+.method-graph-head .eyebrow{color:var(--ink)}
+.method-graph-head h2{margin:28px 0 18px;font:900 clamp(50px,7vw,86px)/.95 Arial Black,Arial,sans-serif;letter-spacing:-.04em;text-transform:uppercase}
+.method-graph-head>p:last-child{max-width:760px;font:19px/1.65 Georgia,serif}
+.method-graph-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px;margin-top:60px;align-items:stretch}
+.graph-controls{display:flex;flex-direction:column;gap:25px;padding:30px;background:var(--cream);color:var(--ink);border:3px solid var(--cream)}
+.graph-control{display:grid;gap:10px}
+.graph-control label{display:flex;justify-content:space-between;gap:20px;font-size:12px;font-weight:900;letter-spacing:.08em;text-transform:uppercase}
+.graph-control output{color:var(--red)}
+.graph-control input{width:100%;accent-color:var(--red);cursor:pointer}
+.graph-controls .text-button{align-self:flex-start;margin-top:auto;cursor:pointer}
+.graph-panel{display:grid;grid-template-columns:35px 1fr;grid-template-rows:360px auto;background:var(--paper);color:var(--ink);border:3px solid var(--cream);padding:24px}
+.graph-scale{display:flex;flex-direction:column;justify-content:space-between;align-items:flex-end;padding:0 8px 35px 0;font-size:10px;font-weight:800}
+.graph-bars{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;border-left:2px solid var(--ink);border-bottom:2px solid var(--ink);background:repeating-linear-gradient(to bottom,transparent 0,transparent calc(25% - 1px),rgba(48,82,92,.22) 25%)}
+.graph-column{display:grid;grid-template-rows:1fr 35px;align-items:end;min-width:0}
+.graph-bar{height:100%;display:flex;align-items:flex-end;justify-content:center;padding:0 12%}
+.graph-bar i{display:block;width:100%;min-height:2px;border:2px solid var(--ink);transition:height .2s ease}
+.graph-column>span{align-self:center;font-size:9px;font-weight:900;line-height:1.2;text-align:center;text-transform:uppercase}
+.graph-reading{grid-column:1/-1;display:flex;align-items:center;gap:24px;padding-top:22px}
+.graph-reading>strong{font:900 56px Arial Black,Arial,sans-serif;color:var(--red)}
+.graph-reading b{text-transform:uppercase}
+.graph-reading p{margin:4px 0 0;font-size:13px;line-height:1.45}
+@media(max-width:900px){.method-graph{padding:70px 0}.method-graph-grid{grid-template-columns:1fr;gap:30px}.graph-panel{grid-template-rows:300px auto}.graph-reading{align-items:flex-start;flex-direction:column;gap:4px}}
+@media(max-width:500px){.graph-panel{padding:14px;grid-template-columns:28px 1fr}.graph-bars{gap:6px}.graph-bar{padding:0 5%}.graph-column>span{font-size:8px}.graph-reading>strong{font-size:44px}}
