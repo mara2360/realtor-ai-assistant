@@ -40,8 +40,8 @@ export default function Home() {
       <a className="skip-link" href="#primary-heading">Skip to main content</a>
       <nav className="nav shell" aria-label="Primary navigation">
         <a className="brand" href="#top" aria-label="Block Atlas home"><span>BA</span><b>Block Atlas</b><small>Crypto Field Notes</small></a>
-        <div className="navlinks"><a href="#homes">Networks</a><a href="#approach">Method</a><a href="#about">Manifesto</a></div>
-        <a className="button button-small" href="#contact">Get the brief <span>↗</span></a>
+        <div className="navlinks"><a href="/networks">Networks</a><a href="/method">Method</a><a href="/manifesto">Manifesto</a></div>
+        <a className="button button-small" href="/brief">Get the brief <span>↗</span></a>
       </nav>
 
       <section className="hero shell" id="top">
